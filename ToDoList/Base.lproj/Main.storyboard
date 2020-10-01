@@ -28,15 +28,15 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6i-s9-KtP">
-                                                    <rect key="frame" x="85" y="11" width="274" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6i-s9-KtP">
+                                                    <rect key="frame" x="58" y="11" width="301" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JWq-4Z-c0i">
-                                                    <rect key="frame" x="8" y="11" width="24" height="273"/>
+                                                    <rect key="frame" x="16" y="5" width="24" height="33"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" image="rectangle" catalog="system"/>
                                                     <state key="selected" image="checkmark.rectangle.portrait" catalog="system"/>
@@ -48,7 +48,6 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="checkBoxButton" destination="JWq-4Z-c0i" id="BgX-mH-kN8"/>
-                                            <outlet property="checkToggled" destination="JWq-4Z-c0i" id="yIF-7z-ksE"/>
                                             <outlet property="nameLabel" destination="f6i-s9-KtP" id="q2Z-JF-3qy"/>
                                             <segue destination="pTr-pW-AT3" kind="show" identifier="ShowDetail" id="6IK-qZ-tLl"/>
                                         </connections>
@@ -105,10 +104,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ufk-Lh-doz">
-                                                    <rect key="frame" x="13" y="5" width="344" height="34"/>
+                                                    <rect key="frame" x="12" y="5" width="344" height="34"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="textFieldEditingChanged:" destination="pTr-pW-AT3" eventType="editingChanged" id="KV3-A1-JhO"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
