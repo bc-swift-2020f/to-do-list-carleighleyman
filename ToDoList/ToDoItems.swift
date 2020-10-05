@@ -52,9 +52,9 @@ class ToDoItems {
             if itemsArray[index].reminderSet {
                 let toDoItem = itemsArray[index]
                 itemsArray[index].notificationID = LocalNotificationManager.setCalendarNotification(title: toDoItem.name, subtitle: "", body: toDoItem.notes, badgeNumber: nil, sound: .default, date: toDoItem.date)
+                
             }
         }
     }
-        
-
+    
 }
